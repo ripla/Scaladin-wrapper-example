@@ -2,10 +2,11 @@ package vaadin.scala.example.wrapper
 
 import vaadin.scala._
 import org.vaadin.risto.stepper.IntStepper
+import vaadin.scala.mixins.AbstractFieldMixin
 
-class WrappedIntStepper(implicit wrapper: WrapperRegistry) extends AbstractField {
-  override val p = new IntStepper
-  wr.put(this)
+trait IntStepperMixin extends AbstractFieldMixin
+
+class WrappedIntStepper(override val p: IntStepper with IntStepperMixin = new IntStepper with IntStepperMixin) extends AbstractField(p) {
 
   def maxValue_=(max: Int) = p.setMaxValue(max)
   def maxValue: Int = p.getMaxValue

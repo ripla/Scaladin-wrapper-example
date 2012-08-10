@@ -12,7 +12,7 @@ resolvers += "Vaadin add-ons repository" at "http://maven.vaadin.com/vaadin-addo
 
 // basic dependencies
 libraryDependencies ++= Seq(
-  "com.vaadin" % "vaadin" % "6.7.6",
+  "com.vaadin" % "vaadin" % "6.8.2",
   //"org.vaadin.addons" % "scaladin" % "2.0.0-SNAPSHOT",
   "org.eclipse.jetty" % "jetty-webapp" % "8.0.4.v20111024" % "container"
 )
